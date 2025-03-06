@@ -1,0 +1,155 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Warna Dasar */
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* Menu */
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu a {
+    display: block;
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #f0a500;
+}
+
+/* Tampilkan menu di semua perangkat */
+@media (min-width: 1024px) {
+    .menu {
+        display: flex !important;
+        position: relative;
+        background: none;
+        top: 0;
+        right: 0;
+        padding: 0;
+    }
+
+    .menu a {
+        padding: 10px 15px;
+    }
+
+    .hamburger {
+        display: none; /* Sembunyikan hamburger di layar besar */
+    }
+}
+
+/* Kontak & Lokasi */
+.kontak-container, .lokasi-container {
+    text-align: center;
+    padding: 50px 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/es-cincau.jpg') no-repeat center center/cover;
+    text-align: center;
+    position: relative;
+
+    /* Efek gradasi transparan di bawah */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+}
+
+
+/* Menu Section */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+.menu-item {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    margin-top: 20px;
+}
